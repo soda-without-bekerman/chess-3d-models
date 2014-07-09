@@ -1,6 +1,6 @@
 //доска
 $fn=128;
 difference(){
-cube([10,10,1.5]);
-translate([1,1,1]) cube(8,8,1);
+cube([90,90,25]);
+translate([5,5,5]) cube(80,80,20);
 }

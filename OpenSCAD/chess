@@ -1,0 +1,223 @@
+//доска
+
+
+difference(){
+  cube ([90, 90, 25]);
+  translate ([5, 5, 5]) cube (80 ,80 ,20);
+ }
+//кубы к доске
+
+color ([0,0,0]) {
+// black
+for (i=[0:3]) { translate ([20*i+5,5,5])cube ([10,10,20]); 
+}
+}
+
+color ([1,1,1]) {
+ for (i=[0:3]) { translate ([20*i+15,5,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([1,1,1]) {
+for (i=[0:3]) { translate ([20*i+5,15,5])cube ([10,10,20]); 
+}
+}
+
+color ([0,0,0]) {
+ for (i=[0:3]) { translate ([20*i+15,15,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([0,0,0]) {
+// black
+for (i=[0:3]) { translate ([20*i+5,25,5])cube ([10,10,20]); 
+}
+}
+
+color ([1,1,1]) {
+ for (i=[0:3]) { translate ([20*i+15,25,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([1,1,1]) {
+for (i=[0:3]) { translate ([20*i+5,35,5])cube ([10,10,20]); 
+}
+}
+
+color ([0,0,0]) {
+ for (i=[0:3]) { translate ([20*i+15,35,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([0,0,0]) {
+// black
+for (i=[0:3]) { translate ([20*i+5,45,5])cube ([10,10,20]); 
+}
+}
+
+color ([1,1,1]) {
+ for (i=[0:3]) { translate ([20*i+15,45,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([1,1,1]) {
+for (i=[0:3]) { translate ([20*i+5,55,5])cube ([10,10,20]); 
+}
+}
+
+color ([0,0,0]) {
+ for (i=[0:3]) { translate ([20*i+15,55,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([0,0,0]) {
+// black
+for (i=[0:3]) { translate ([20*i+5,65,5])cube ([10,10,20]); 
+}
+}
+
+color ([1,1,1]) {
+ for (i=[0:3]) { translate ([20*i+15,65,5])cube ([10,10,20]); 
+}
+}
+
+
+color ([1,1,1]) {
+for (i=[0:3]) { translate ([20*i+5,75,5])cube ([10,10,20]); 
+}
+}
+
+color ([0,0,0]) {
+ for (i=[0:3]) { translate ([20*i+15,75,5])cube ([10,10,20]); 
+}
+}
+
+//фигуры
+
+// тура
+module tower() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+    translate ([0,0,0])cylinder(5,10,10);
+    translate ([0,0,5])cylinder (24,7,4);
+    difference (){
+      translate ([0,0,29])cylinder(8,7,7);
+      translate ([0,0,33])cylinder(9,5,5);
+    }
+  }
+}
+
+color ([1,1,1]) translate ([10,10,0])tower();
+color ([1,1,1])translate([80,10,0]) tower();
+color ([0,0,0])translate ([10,80,0])tower();
+color ([0,0,0])translate([80,80,0]) tower();
+
+
+//конь
+module horse() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+cylinder(5,10,10);
+translate ([0,0,5])cylinder (33,7,4);
+rotate ([0,-92,0])translate ([29,0,0])cylinder (10,5,2);
+	}
+}
+
+color ([1,1,1])translate([20,10,0]) horse();
+color ([1,1,1])translate([70,10,0]) horse();
+color ([0,0,0])translate([20,80,0]) horse();
+color ([0,0,0])translate([70,80,0]) horse();
+
+
+//ладья
+
+module rook() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+
+translate ([0,0,0])cylinder(5,10,10);
+translate ([0,0,5])cylinder (24,7,3);
+translate ([0,0,34.5]) sphere (6);
+translate ([0,0,38])cylinder (7,2,0);
+translate ([0,0,26])cylinder (1,6,6);
+	}	
+}
+
+color ([1,1,1])translate([30,10,0]) rook();
+color ([1,1,1])translate([60,10,0]) rook();
+color ([0,0,0])translate([30,80,0]) rook();
+color ([0,0,0])translate([60,80,0]) rook();
+
+
+//ферзь
+
+module queen() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+
+translate ([0,0,0])cylinder(5,10,10);
+translate ([0,0,5])cylinder (28,7,4);
+translate ([0,0,33])cylinder (8,5,8);
+translate ([0,0,41])cylinder (3,5,3);
+translate ([0,0,45.5])sphere (2);
+	}
+}
+color ([1,1,1])translate([50,10,0]) queen();
+color ([0,0,0])translate([40,80,0]) queen();
+
+//король
+
+module king() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+
+translate ([0,0,37.5]) sphere (6);
+translate ([0,0,5])cylinder (28,7,4);
+translate ([0,0,0]) cylinder (5,10,10);
+translate ([0.5,-0.5,43.5]) cube ([1,1,6]);
+rotate ([90,0,0]) translate ([0.5,46.5,-2.5]) cube ([1,1,5]);
+	}
+}
+color ([1,1,1])translate([40,10,0]) king();
+color ([0,0,0])translate([50,80,0]) king();
+
+
+//пешка 
+
+module pawn() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+translate ([0,0,0])cylinder(5,10,10);
+translate ([0,0,5])cylinder (20,7,4);
+translate ([0,0,29]) sphere (7);
+	}
+}
+color ([1,1,1])translate([10,20,0]) pawn();
+color ([1,1,1])translate([20,20,0]) pawn();
+color ([1,1,1])translate([30,20,0]) pawn();
+color ([1,1,1])translate([40,20,0]) pawn();
+color ([1,1,1])translate([50,20,0]) pawn();
+color ([1,1,1])translate([60,20,0]) pawn();
+color ([1,1,1])translate([70,20,0]) pawn();
+color ([1,1,1])translate([80,20,0]) pawn();
+
+color ([0,0,0])translate([10,70,0]) pawn();
+color ([0,0,0])translate([20,70,0]) pawn();
+color ([0,0,0])translate([30,70,0]) pawn();
+color ([0,0,0])translate([40,70,0]) pawn();
+color ([0,0,0])translate([50,70,0]) pawn();
+color ([0,0,0])translate([60,70,0]) pawn();
+color ([0,0,0])translate([70,70,0]) pawn();
+color ([0,0,0])translate([80,70,0]) pawn();

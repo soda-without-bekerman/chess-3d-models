@@ -1,4 +1,12 @@
-$fn=128;
-cylinder(5,10,10);
+//пешка 
+
+module pawn() {
+  scale([.5, .5, .5])
+  translate ([0,0,50])
+	union(){
+translate ([0,0,0])cylinder(5,10,10);
 translate ([0,0,5])cylinder (20,7,4);
 translate ([0,0,29]) sphere (7);
+	}
+}
+pawn();

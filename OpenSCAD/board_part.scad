@@ -1,5 +1,7 @@
 difference(){
-cube ([120,20,3]);
-translate ([5,-5,-5])cube ([10,15,10]);
-translate ([105,-5,-5])cube ([10,15,10]);
-}
+  cube ([120, 60, 3]);
+  translate ([20, 20, 1]) cube ([80 ,80 ,20]);
+	translate ([105, 50, -2]) cube ([10 ,20,20]);
+	translate ([5, 50, -2]) cube ([10,15,20]);
+
+ }

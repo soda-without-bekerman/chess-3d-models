@@ -10,5 +10,5 @@ translate ([50, 50, -19]) cube ([10 ,15 ,20]);
 translate ([60, 50, 1]) cube ([10 ,15 ,20]);
 translate ([70, 50, -19]) cube ([10 ,15 ,20]);
 translate ([80, 50, 1]) cube ([10 ,15 ,20]);
-translate ([90, 50, -19]) cube ([10 ,15 ,20]);
+translate ([90, 50, -19]) cube ([9 ,15 ,20]);
  }

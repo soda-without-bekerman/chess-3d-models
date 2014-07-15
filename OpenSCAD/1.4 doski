@@ -1,0 +1,15 @@
+difference () {
+cube ([88,88,7.5]); 
+translate ([82,60,3.7])rotate ([0,90,0])cylinder (10,3.5,3.5);
+translate ([82,20,3.7])rotate ([0,90,0])cylinder (10,3.5,3.5);
+}
+translate ([0,0,7.5])cube ([22,22,1.5]);
+translate ([0,44,7.5])cube ([22,22,1.5]);
+translate ([22,22,7.5])cube ([22,22,1.5]);
+translate ([22,66,7.5])cube ([22,22,1.5]);
+translate ([44,0,7.5])cube ([22,22,1.5]);
+translate ([44,44,7.5])cube ([22,22,1.5]);
+translate ([66,22,7.5])cube ([22,22,1.5]);
+translate ([66,66,7.5])cube ([22,22,1.5]);
+translate ([20,-5,3.7])rotate ([0,90,90])cylinder (10,3.5,3.5);
+translate ([60,-5,3.7])rotate ([0,90,90])cylinder (10,3.5,3.5);

@@ -6,7 +6,9 @@
 *Смоделировать и напечатать игровые шахматы*
 
 ## Авторы
-
+|Настя|Леня|
+|:-----:|:-----:|
+|[![](https://avatars2.githubusercontent.com/u/8099858?s=120)](https://github.com/AnastasiaGordeeva)|[![](https://avatars0.githubusercontent.com/u/6639503?s=120)](https://github.com/leonidprokopovich)
 ## Примеры
 
 
